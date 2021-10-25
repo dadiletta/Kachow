@@ -1,0 +1,68 @@
+App started.
+App started.
+App started.
+App started.
+Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask_restful/__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/runner/Kachow/app/views/basics.py", line 22, in index
+    return render_template('pages/index.html')
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/Kachow/app/templates/pages/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/runner/Kachow/app/templates/base.html", line 29, in top-level template code
+    {% include "shared/navbar.html" with context %}
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: shared/navbar.html
+App started.
+Exception on / [GET]
+Traceback (most recent call last):
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask_restful/__init__.py", line 271, in error_router
+    return original_handler(e)
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/runner/Kachow/app/views/basics.py", line 22, in index
+    return render_template('pages/index.html')
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/runner/Kachow/app/templates/pages/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/runner/Kachow/app/templates/base.html", line 29, in top-level template code
+    {% include "shared/navbar.html" with context %}
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "/opt/virtualenvs/python3/lib/python3.8/site-packages/flask/templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: shared/navbar.html
+App started.

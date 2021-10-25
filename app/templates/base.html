@@ -1,0 +1,72 @@
+{# ------------------ BASE! ---------------- #}
+{# pretty much every page will use this stuff #}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  {# check out the templates/shared/_head.html to see CSS and head includes #}
+  {% include "shared/_head.html" %}
+  <body id="page-top" 
+        class="{% block body_classes %}{% endblock %} {% if session['toggled']==True %}sidebar-toggled{% endif %}">
+
+    {# -- LOADING SCREEN -- #}
+    <div id="cover"></div>
+    {# -- wrapper used by this bootstrap theme for spacing -- #}
+    <div id="wrapper">
+
+      {# we include context so stuff like current_user will work #}
+      {% if not disable_sidebar %}
+        {% include "shared/_sidebar.html" with context %}
+      {% endif %}
+      
+      {#-- Content Wrapper used by this bootstrap theme for spacing --#}
+      <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content used by this bootstrap theme for spacing -->
+        <div id="content">
+        
+          {% if not disable_navbar %}
+            {% include "shared/_nav.html" with context %}
+          {% endif%}
+          
+          {% block content %}
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            
+          </div>
+          {% endblock %}
+      
+          
+        </div>
+        {#-- End of Main Content --#}
+
+        {% include "shared/_footer.html" with context %}
+
+      </div>
+      <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper --> 
+
+    {% block btt %}
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
+    {% endblock %}
+
+    {# You can put modals pretty much anywhere, but some folks find it tidy to keep them out of the content block #}
+    {% block modals %}{% endblock %}
+
+    {# LOAD UP ALL YOUR THEME'S JS HERE #}
+    {% include "shared/_js.html" with context %}
+
+    {# A convenient block so you can drop in your own template-specific JS code #}
+    {% block tail %}{% endblock %}
+
+    {# activate menu items #}
+    <script>
+      $('#{% block linkitem %}replaceme{% endblock %}').addClass('active');
+    </script>
+  </body>
+</html>        

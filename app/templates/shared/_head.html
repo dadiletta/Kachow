@@ -1,0 +1,25 @@
+<head>
+    {# overwrite this meta block if you want Google to categorize pages differently #}
+    {% block head_meta %}
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{ meta_description if meta_description else 'Flaskinni App Template' }}">
+      <meta name="author" content="An open source project led by Ares Development LLC">
+    {% endblock %}
+    {# overwrite the title block in your templates to modify the title #}
+    <title>Kachow | {{ title if title else "Welcome" }}</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
